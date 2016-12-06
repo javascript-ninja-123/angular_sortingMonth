@@ -1,0 +1,24 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+}
+ul,li{
+ list-style:none;
+}
+ul{
+  padding:10px 5px;
+}
+.winter{
+  background-color:white;
+  border:1px solid black;
+}
+.spring{
+  background-color:green;
+}
+.summer{
+  background-color:orange;
+}
+.fall{
+  background-color:red;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <h1>Sorting Months</h1>
+    <div ng-controller="myCtrl">
+      <div>
+        <input type="search" ng-model="myValue" placeholder="type">
+       <ul ng-repeat="month in months | filter:myValue | lowercase | orderBy:'ordinal'"  ng-class="{winter:'winter',spring:'spring',fall:'fall',summer:'summer'}[month.season]">
+         <li><h1>{{month.english}}</h1>
+             <h4>French word: {{month.french}}</h4>
+             <h4>Numbers of Days: {{month.days}}</h4>
+             <h4 >season: {{month.season}}</h4>
+         </li>
+       </ul>
+      </div>
+    </div>
+  </body>
+
+</html>
